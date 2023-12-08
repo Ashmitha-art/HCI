@@ -1010,8 +1010,9 @@ textarea#comment.update_mail::placeholder {
 .copyright_section {
     width: 100%;
     float: left;
-    background-color: #d07d6b;
+    background-color: lightblue;
     height: auto;
+    margin-top: 200px; 
 }
 
 .copyright_text {
@@ -1047,6 +1048,8 @@ textarea#comment.update_mail::placeholder {
     border: none;
     margin-right: 5px;
     margin-left: 5px;
+    border-radius: 25;
+    border-color: #111111;
  
 }
  
@@ -1055,18 +1058,21 @@ textarea#comment.update_mail::placeholder {
     margin-top:0px;
     margin-right: 500px;
     margin-left: 600px;
-    background-color: #fc947f;
+    background-color: lightblue;
+    border-radius: 25px;
+    border-color: #111111;
  
 }
  
 .search button{
-    background-color: #fc947f;
+    background-color: lightblue;
     color: #2e2e2d;
     float: center;
     padding: 5px 10px;
     margin-right: 5px;
     font-size: 20px;
-    border: none;
+    border-radius: 25;
+    border-color: #111111;
     cursor: pointer;
 } 
 /* Search Bar end*/
