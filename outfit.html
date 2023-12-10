@@ -34,8 +34,8 @@
 <body>
    <div class="header_section">
       <div class="container-fluid">
-         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="index.html">Weatherlytics</a>
+         <nav class="navbar navbar-expand-lg navbar-light bg-light" style="display: flex; align-items: center;">
+            <a class="navbar-brand" href="index.html" style="display: flex; align-items: center;">Weatherlytics</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                <span class="navbar-toggler-icon"></span>
@@ -70,19 +70,16 @@
          </nav>
       </div>
       <!-- Weather basic section start -->
-      <div class="coffee_section layout_padding">
-         <!-- search bar right align -->
-         <div class="search">
-
-            <form action="#">
-               <input type="text" placeholder="San Francisco..." name="search">
-               <button>
-                  <i class="fa fa-search" style="font-size: 18px;">
-                  </i>
-               </button>
-            </form>
+      <div class="coffee_section layout_padding" style="padding-top: 50px;">
+         <div class="search" style="width: 80%; max-width: 412px; margin: 0 auto; ">
+             <form action="#" style="display: flex; width: 95%;">
+                 <input type="text" placeholder="San Francisco..." name="search" style="flex-grow: 1; margin-right: 10px; height: 40px; line-height: 40px;">
+                 <button style="height: 40px; line-height: 40px;">
+                     <i class="fa fa-search" style="font-size: 18px;"></i>
+                 </button>
+             </form>
          </div>
-      </div>
+     </div>
 
       <div class="container">
          <div class="row">
@@ -90,7 +87,8 @@
             <div class="bulit_icon"></div>
          </div>
 
-         <p class="food_title">Outfit Recommendations for San Francisco</p>
+         <p class="food_title" style="text-align: center; margin: auto; margin-top: 5%; width: fit-content;">Outfit Recommendations for San Francisco</p>
+
       </div>
       <div class="coffee_section_2">
          <div id="main_slider" class="carousel slide" data-ride="carousel">
@@ -185,16 +183,23 @@
    </div>
    <!-- Weather basic section end -->
 
+   <div class="container" style=" padding-top:50px ;">
+      <div class="row justify-content-center">
+         <div style="width: 100%; height: 60px; background-color: transparent; margin-bottom: 20px; display: flex; ">
+         </div>
+      </div>
+   </div>
    <!-- copyright section start -->
    <div class="copyright_section">
       <div class="container">
-         <div class="row">
-            <div class="col-lg-6 col-sm-12">
+         <div class="row justify-content-center">
+            <div class="col-12 text-center">
                <p class="copyright_text">Privacy Policy. 2023 All Rights Reserved.</p>
             </div>
          </div>
       </div>
    </div>
+   
    </div>
    <!-- copyright section end -->
    <!-- Javascript files-->
