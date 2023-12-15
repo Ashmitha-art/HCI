@@ -92,9 +92,9 @@
          Email: apais@sfsu.edu<br>
          Contact Number: +1 9030384834<br>
          Birth Date: 09/30/2016</p>
-      <p><button>Edit Information</button></p>
-      <p><button>Sign Out</button></p>
-      <p><button>Delete Account</button></p>
+      <p><button onclick="navigateToNewPage()">Edit Information</button></p>
+      <p><button onclick="signOutPopup()">Sign Out</button></p>
+      <p><button onclick="deleteAccountPopup()">Delete Account</button></p>
 
    </div>
 
@@ -108,6 +108,20 @@
    <!-- sidebar -->
    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
    <script src="js/custom.js"></script>
+   <script>
+      function signOutPopup() {
+         alert("You have successfully signed out.");
+         window.location.href = "index.html";
+      }
+      function deleteAccountPopup() {
+         alert("Your account has been deactivated successfully.");
+         window.location.href = "index.html";
+      }
+      function navigateToNewPage() {
+         // Redirect to the new page (change the URL to your desired page)
+         window.location.href = 'editInformation.html';
+      }
+   </script>
 </body>
 
 </html>
