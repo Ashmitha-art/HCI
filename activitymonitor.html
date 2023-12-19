@@ -71,15 +71,16 @@
       <!-- Weather basic section start -->
       <div class="coffee_section layout_padding" style="padding-top: 50px;">
          <div class="search" style="width: 80%; max-width: 412px; margin: 0 auto; ">
-             <form action="#" style="display: flex; width: 95%;">
-                 <input type="text" placeholder="San Francisco..." name="search" style="flex-grow: 1; margin-right: 10px; height: 40px; line-height: 40px;">
-                 <button style="height: 40px; line-height: 40px;">
-                     <i class="fa fa-search" style="font-size: 18px;"></i>
-                 </button>
-             </form>
+            <form action="#" style="display: flex; width: 95%;">
+               <input type="text" placeholder="San Francisco..." name="search"
+                  style="flex-grow: 1; margin-right: 10px; height: 40px; line-height: 40px;">
+               <button style="height: 40px; line-height: 40px;">
+                  <i class="fa fa-search" style="font-size: 18px;"></i>
+               </button>
+            </form>
          </div>
-     </div>
-     
+      </div>
+
 
       <div class="container">
          <div class="row">
@@ -87,7 +88,9 @@
             <div class="bulit_icon"></div>
          </div>
 
-         <p class="food_title" style="text-align: center; margin: auto; margin-top: 5%; width: fit-content; font-weight: 300px; font-size: 25px;">Activity Monitor</p>
+         <p class="food_title"
+            style="text-align: center; margin: auto; margin-top: 5%; width: fit-content; font-weight: 300px; font-size: 25px;">
+            Activity Monitor</p>
 
       </div>
       <div class="coffee_section_2">
@@ -183,75 +186,186 @@
    </div>
    <!-- Weather basic section end -->
 
+
+   <!-- Timeframe selection -->
+   <div class="container" style="padding-top: 30px;">
+      <div class="row justify-content-center">
+         <div class="timeframe-slider" style="text-align: center; margin-bottom: 20px; background-color: transparent;">
+            <button id="day" class="timeframe-button" onclick="updateData('day')">Day</button>
+            <button id="week" class="timeframe-button" onclick="updateData('week')">Week</button>
+            <button id="month" class="timeframe-button" onclick="updateData('month')">Month</button>
+         </div>
+      </div>
+   </div>
+   <!-- Timeframe selection end -->
+
+
+
    <div class="container" style=" padding-top:50px ;">
       <div class="row justify-content-center">
-          <!-- left side -->
-          <div class="col-md-6" style="display: flex; flex-direction: column; align-items: flex-end; padding-right: 10px;">
-              <div style="width: 100%; height: 60px; background-color: transparent; margin-bottom: 20px; display: flex; border-top: 3px solid rgb(129, 188, 255); border-bottom: 3px solid rgb(129, 188, 255);">
-                  <div style="flex: 1; display: flex; align-items: center; justify-content: flex-start; color: black; font-size: 16px; padding-left: 15%;">Steps</div>
-                  <div style="flex: 1; display: flex; align-items: center; justify-content: center; color: black; font-size: 16px;">-</div>
-                  <div style="flex: 1; display: flex; align-items: center; justify-content: flex-end; color: black; font-size: 16px; padding-right: 15%;">XXXXX</div>
-              </div>
-              <div style="width: 100%; height: 60px; background-color: transparent; margin-bottom: 20px; display: flex; border-top: 3px solid rgb(129, 188, 255); border-bottom: 3px solid rgb(129, 188, 255);">
-               <div style="flex: 1; display: flex; align-items: center; justify-content: flex-start; color: black; font-size: 16px; padding-left: 15%;">Distance</div>
-               <div style="flex: 1; display: flex; align-items: center; justify-content: center; color: black; font-size: 16px;">-</div>
-               <div style="flex: 1; display: flex; align-items: center; justify-content: flex-end; color: black; font-size: 16px; padding-right: 15%;">XX.XX</div>
-           </div><div style="width: 100%; height: 60px; background-color: transparent; margin-bottom: 20px; display: flex; border-top: 3px solid rgb(129, 188, 255); border-bottom: 3px solid rgb(129, 188, 255);">
-            <div style="flex: 1; display: flex; align-items: center; justify-content: flex-start; color: black; font-size: 16px; padding-left: 15%;">Flights Climbed</div>
-            <div style="flex: 1; display: flex; align-items: center; justify-content: center; color: black; font-size: 16px;">-</div>
-            <div style="flex: 1; display: flex; align-items: center; justify-content: flex-end; color: black; font-size: 16px; padding-right: 15%;">XX.XX</div>
-        </div><div style="width: 100%; height: 60px; background-color: transparent; margin-bottom: 20px; display: flex; border-top: 3px solid rgb(129, 188, 255); border-bottom: 3px solid rgb(129, 188, 255);">
-         <div style="flex: 1; display: flex; align-items: center; justify-content: flex-start; color: black; font-size: 16px; padding-left: 15%;">Resting Energy</div>
-         <div style="flex: 1; display: flex; align-items: center; justify-content: center; color: black; font-size: 16px;">-</div>
-         <div style="flex: 1; display: flex; align-items: center; justify-content: flex-end; color: black; font-size: 16px; padding-right: 15%;">XX.XX</div>
-     </div><div style="width: 100%; height: 60px; background-color: transparent; margin-bottom: 20px; display: flex; border-top: 3px solid rgb(129, 188, 255); border-bottom: 3px solid rgb(129, 188, 255);">
-      <div style="flex: 1; display: flex; align-items: center; justify-content: flex-start; color: black; font-size: 16px; padding-left: 15%;">Active Energy</div>
-      <div style="flex: 1; display: flex; align-items: center; justify-content: center; color: black; font-size: 16px;">-</div>
-      <div style="flex: 1; display: flex; align-items: center; justify-content: flex-end; color: black; font-size: 16px; padding-right: 15%;">XX.XX</div>
-  </div><div style="width: 100%; height: 60px; background-color: transparent; margin-bottom: 20px; display: flex; border-top: 3px solid rgb(129, 188, 255); border-bottom: 3px solid rgb(129, 188, 255);">
-   <div style="flex: 1; display: flex; align-items: center; justify-content: flex-start; color: black; font-size: 16px; padding-left: 15%;">Stand Minutes</div>
-   <div style="flex: 1; display: flex; align-items: center; justify-content: center; color: black; font-size: 16px;">-</div>
-   <div style="flex: 1; display: flex; align-items: center; justify-content: flex-end; color: black; font-size: 16px; padding-right: 15%;">XX.XX</div>
-</div>
-              <!-- more boxes on left -->
-          </div>
-  
-          <!-- right side -->
-          <div class="col-md-6" style="display: flex; flex-direction: column; align-items: flex-start; padding-left: 10px;">
-              <div style="width: 100%; height: 60px; background-color: transparent; margin-bottom: 20px; display: flex; border-top: 3px solid rgb(129, 188, 255); border-bottom: 3px solid rgb(129, 188, 255);">
-               <div style="flex: 1; display: flex; align-items: center; justify-content: flex-start; color: black; font-size: 16px; padding-left: 15%;">Exercise Minutes</div>
-               <div style="flex: 1; display: flex; align-items: center; justify-content: center; color: black; font-size: 16px;">-</div>
-               <div style="flex: 1; display: flex; align-items: center; justify-content: flex-end; color: black; font-size: 16px; padding-right: 15%;">XX.XX</div>
-           </div><div style="width: 100%; height: 60px; background-color: transparent; margin-bottom: 20px; display: flex; border-top: 3px solid rgb(129, 188, 255); border-bottom: 3px solid rgb(129, 188, 255);">
-            <div style="flex: 1; display: flex; align-items: center; justify-content: flex-start; color: black; font-size: 16px; padding-left: 15%;">Sit Minutes</div>
-            <div style="flex: 1; display: flex; align-items: center; justify-content: center; color: black; font-size: 16px;">-</div>
-            <div style="flex: 1; display: flex; align-items: center; justify-content: flex-end; color: black; font-size: 16px; padding-right: 15%;">XX.XX</div>
-        </div><div style="width: 100%; height: 60px; background-color: transparent; margin-bottom: 20px; display: flex; border-top: 3px solid rgb(129, 188, 255); border-bottom: 3px solid rgb(129, 188, 255);">
-         <div style="flex: 1; display: flex; align-items: center; justify-content: flex-start; color: black; font-size: 16px; padding-left: 15%;">Workouts</div>
-         <div style="flex: 1; display: flex; align-items: center; justify-content: center; color: black; font-size: 16px;">-</div>
-         <div style="flex: 1; display: flex; align-items: center; justify-content: flex-end; color: black; font-size: 16px; padding-right: 15%;">XX.XX</div>
-     </div><div style="width: 100%; height: 60px; background-color: transparent; margin-bottom: 20px; display: flex; border-top: 3px solid rgb(129, 188, 255); border-bottom: 3px solid rgb(129, 188, 255);">
-      <div style="flex: 1; display: flex; align-items: center; justify-content: flex-start; color: black; font-size: 16px; padding-left: 15%;">Running Speed</div>
-      <div style="flex: 1; display: flex; align-items: center; justify-content: center; color: black; font-size: 16px;">-</div>
-      <div style="flex: 1; display: flex; align-items: center; justify-content: flex-end; color: black; font-size: 16px; padding-right: 15%;">XX.XX</div>
-  </div><div style="width: 100%; height: 60px; background-color: transparent; margin-bottom: 20px; display: flex; border-top: 3px solid rgb(129, 188, 255); border-bottom: 3px solid rgb(129, 188, 255);">
-   <div style="flex: 1; display: flex; align-items: center; justify-content: flex-start; color: black; font-size: 16px; padding-left: 15%;">Calories Burned</div>
-   <div style="flex: 1; display: flex; align-items: center; justify-content: center; color: black; font-size: 16px;">-</div>
-   <div style="flex: 1; display: flex; align-items: center; justify-content: flex-end; color: black; font-size: 16px; padding-right: 15%;">XX.XX</div>
-</div><div style="width: 100%; height: 60px; background-color: transparent; margin-bottom: 20px; display: flex; border-top: 3px solid rgb(129, 188, 255); border-bottom: 3px solid rgb(129, 188, 255);">
-   <div style="flex: 1; display: flex; align-items: center; justify-content: flex-start; color: black; font-size: 16px; padding-left: 15%;">Sleep</div>
-   <div style="flex: 1; display: flex; align-items: center; justify-content: center; color: black; font-size: 16px;">-</div>
-   <div style="flex: 1; display: flex; align-items: center; justify-content: flex-end; color: black; font-size: 16px; padding-right: 15%;">XX.XX</div>
-</div>
-<div style="width: 100%; height: 60px; background-color: transparent; margin-bottom: 20px; display: flex; ">
-</div>
-              <!-- more boxes on right -->
-          </div>
+         <!-- left side -->
+         <div class="col-md-6"
+            style="display: flex; flex-direction: column; align-items: flex-end; padding-right: 10px;">
+            <div id="steps"
+               style="width: 100%; height: 60px; background-color: transparent; margin-bottom: 20px; display: flex; border-top: 3px solid rgb(129, 188, 255); border-bottom: 3px solid rgb(129, 188, 255);">
+               <div
+                  style="flex: 1; display: flex; align-items: center; justify-content: flex-start; color: black; font-size: 16px; padding-left: 15%;">
+                  Steps</div>
+               <div
+                  style="flex: 1; display: flex; align-items: center; justify-content: center; color: black; font-size: 16px;">
+                  -</div>
+               <div
+                  style="flex: 1; display: flex; align-items: center; justify-content: flex-end; color: black; font-size: 16px; padding-right: 15%;">
+                  XXXXX</div>
+            </div>
+            <div id="distance"
+               style="width: 100%; height: 60px; background-color: transparent; margin-bottom: 20px; display: flex; border-top: 3px solid rgb(129, 188, 255); border-bottom: 3px solid rgb(129, 188, 255);">
+               <div
+                  style="flex: 1; display: flex; align-items: center; justify-content: flex-start; color: black; font-size: 16px; padding-left: 15%;">
+                  Distance</div>
+               <div
+                  style="flex: 1; display: flex; align-items: center; justify-content: center; color: black; font-size: 16px;">
+                  -</div>
+               <div
+                  style="flex: 1; display: flex; align-items: center; justify-content: flex-end; color: black; font-size: 16px; padding-right: 15%;">
+                  XX.XX</div>
+            </div>
+            <div id="flightsClimbed"
+               style="width: 100%; height: 60px; background-color: transparent; margin-bottom: 20px; display: flex; border-top: 3px solid rgb(129, 188, 255); border-bottom: 3px solid rgb(129, 188, 255);">
+               <div
+                  style="flex: 1; display: flex; align-items: center; justify-content: flex-start; color: black; font-size: 16px; padding-left: 15%;">
+                  Flights Climbed</div>
+               <div
+                  style="flex: 1; display: flex; align-items: center; justify-content: center; color: black; font-size: 16px;">
+                  -</div>
+               <div
+                  style="flex: 1; display: flex; align-items: center; justify-content: flex-end; color: black; font-size: 16px; padding-right: 15%;">
+                  XX.XX</div>
+            </div>
+            <div id="restingEnergy"
+               style="width: 100%; height: 60px; background-color: transparent; margin-bottom: 20px; display: flex; border-top: 3px solid rgb(129, 188, 255); border-bottom: 3px solid rgb(129, 188, 255);">
+               <div
+                  style="flex: 1; display: flex; align-items: center; justify-content: flex-start; color: black; font-size: 16px; padding-left: 15%;">
+                  Resting Energy</div>
+               <div
+                  style="flex: 1; display: flex; align-items: center; justify-content: center; color: black; font-size: 16px;">
+                  -</div>
+               <div
+                  style="flex: 1; display: flex; align-items: center; justify-content: flex-end; color: black; font-size: 16px; padding-right: 15%;">
+                  XX.XX</div>
+            </div>
+            <div id="activeEnergy"
+               style="width: 100%; height: 60px; background-color: transparent; margin-bottom: 20px; display: flex; border-top: 3px solid rgb(129, 188, 255); border-bottom: 3px solid rgb(129, 188, 255);">
+               <div
+                  style="flex: 1; display: flex; align-items: center; justify-content: flex-start; color: black; font-size: 16px; padding-left: 15%;">
+                  Active Energy</div>
+               <div
+                  style="flex: 1; display: flex; align-items: center; justify-content: center; color: black; font-size: 16px;">
+                  -</div>
+               <div
+                  style="flex: 1; display: flex; align-items: center; justify-content: flex-end; color: black; font-size: 16px; padding-right: 15%;">
+                  XX.XX</div>
+            </div>
+            <div id="standMinutes"
+               style="width: 100%; height: 60px; background-color: transparent; margin-bottom: 20px; display: flex; border-top: 3px solid rgb(129, 188, 255); border-bottom: 3px solid rgb(129, 188, 255);">
+               <div
+                  style="flex: 1; display: flex; align-items: center; justify-content: flex-start; color: black; font-size: 16px; padding-left: 15%;">
+                  Stand Minutes</div>
+               <div
+                  style="flex: 1; display: flex; align-items: center; justify-content: center; color: black; font-size: 16px;">
+                  -</div>
+               <div
+                  style="flex: 1; display: flex; align-items: center; justify-content: flex-end; color: black; font-size: 16px; padding-right: 15%;">
+                  XX.XX</div>
+            </div>
+            <!-- more boxes on left -->
+         </div>
+
+
+         <!-- right side -->
+         <div class="col-md-6"
+            style="display: flex; flex-direction: column; align-items: flex-start; padding-left: 10px;">
+            <div id="exerciseMinutes"
+               style="width: 100%; height: 60px; background-color: transparent; margin-bottom: 20px; display: flex; border-top: 3px solid rgb(129, 188, 255); border-bottom: 3px solid rgb(129, 188, 255);">
+               <div
+                  style="flex: 1; display: flex; align-items: center; justify-content: flex-start; color: black; font-size: 16px; padding-left: 15%;">
+                  Exercise Minutes</div>
+               <div
+                  style="flex: 1; display: flex; align-items: center; justify-content: center; color: black; font-size: 16px;">
+                  -</div>
+               <div
+                  style="flex: 1; display: flex; align-items: center; justify-content: flex-end; color: black; font-size: 16px; padding-right: 15%;">
+                  XX.XX</div>
+            </div>
+            <div id="sitMinutes"
+               style="width: 100%; height: 60px; background-color: transparent; margin-bottom: 20px; display: flex; border-top: 3px solid rgb(129, 188, 255); border-bottom: 3px solid rgb(129, 188, 255);">
+               <div
+                  style="flex: 1; display: flex; align-items: center; justify-content: flex-start; color: black; font-size: 16px; padding-left: 15%;">
+                  Sit Minutes</div>
+               <div
+                  style="flex: 1; display: flex; align-items: center; justify-content: center; color: black; font-size: 16px;">
+                  -</div>
+               <div
+                  style="flex: 1; display: flex; align-items: center; justify-content: flex-end; color: black; font-size: 16px; padding-right: 15%;">
+                  XX.XX</div>
+            </div>
+            <div id="workouts"
+               style="width: 100%; height: 60px; background-color: transparent; margin-bottom: 20px; display: flex; border-top: 3px solid rgb(129, 188, 255); border-bottom: 3px solid rgb(129, 188, 255);">
+               <div
+                  style="flex: 1; display: flex; align-items: center; justify-content: flex-start; color: black; font-size: 16px; padding-left: 15%;">
+                  Workouts</div>
+               <div
+                  style="flex: 1; display: flex; align-items: center; justify-content: center; color: black; font-size: 16px;">
+                  -</div>
+               <div
+                  style="flex: 1; display: flex; align-items: center; justify-content: flex-end; color: black; font-size: 16px; padding-right: 15%;">
+                  XX.XX</div>
+            </div>
+            <div id="runningSpeed"
+               style="width: 100%; height: 60px; background-color: transparent; margin-bottom: 20px; display: flex; border-top: 3px solid rgb(129, 188, 255); border-bottom: 3px solid rgb(129, 188, 255);">
+               <div
+                  style="flex: 1; display: flex; align-items: center; justify-content: flex-start; color: black; font-size: 16px; padding-left: 15%;">
+                  Running Speed</div>
+               <div
+                  style="flex: 1; display: flex; align-items: center; justify-content: center; color: black; font-size: 16px;">
+                  -</div>
+               <div
+                  style="flex: 1; display: flex; align-items: center; justify-content: flex-end; color: black; font-size: 16px; padding-right: 15%;">
+                  XX.XX</div>
+            </div>
+            <div id="caloriesBurned"
+               style="width: 100%; height: 60px; background-color: transparent; margin-bottom: 20px; display: flex; border-top: 3px solid rgb(129, 188, 255); border-bottom: 3px solid rgb(129, 188, 255);">
+               <div
+                  style="flex: 1; display: flex; align-items: center; justify-content: flex-start; color: black; font-size: 16px; padding-left: 15%;">
+                  Calories Burned</div>
+               <div
+                  style="flex: 1; display: flex; align-items: center; justify-content: center; color: black; font-size: 16px;">
+                  -</div>
+               <div
+                  style="flex: 1; display: flex; align-items: center; justify-content: flex-end; color: black; font-size: 16px; padding-right: 15%;">
+                  XX.XX</div>
+            </div>
+            <div id="sleep"
+               style="width: 100%; height: 60px; background-color: transparent; margin-bottom: 20px; display: flex; border-top: 3px solid rgb(129, 188, 255); border-bottom: 3px solid rgb(129, 188, 255);">
+               <div
+                  style="flex: 1; display: flex; align-items: center; justify-content: flex-start; color: black; font-size: 16px; padding-left: 15%;">
+                  Sleep</div>
+               <div
+                  style="flex: 1; display: flex; align-items: center; justify-content: center; color: black; font-size: 16px;">
+                  -</div>
+               <div
+                  style="flex: 1; display: flex; align-items: center; justify-content: flex-end; color: black; font-size: 16px; padding-right: 15%;">
+                  XX.XX</div>
+            </div>
+            <div style="width: 100%; height: 60px; background-color: transparent; margin-bottom: 20px; display: flex; ">
+            </div>
+            <!-- more boxes on right -->
+         </div>
       </div>
-  </div>
-  
-  
-   
+   </div>
+
+
+
 
 
    <!-- copyright section start -->
@@ -275,6 +389,114 @@
    <!-- sidebar -->
    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
    <script src="js/custom.js"></script>
+
+   <!--data call-->
+   <script>
+      // data for timeframes, day,week,month
+      var data = {
+         'day': {
+            'steps': '5,000',
+            'distance': '3 m',
+            'flightsClimbed': '10',
+            'restingEnergy': '500 kcal',
+            'activeEnergy': '300 kcal',
+            'standMinutes': '45 min',
+            'exerciseMinutes': '30 min',
+            'sitMinutes': '4 hours',
+            'workouts': '2',
+            'runningSpeed': '6 m/h',
+            'caloriesBurned': '350 kcal',
+            'sleep': '7 hours'
+         },
+         'week': {
+            'steps': '35,000',
+            'distance': '21 m',
+            'flightsClimbed': '70',
+            'restingEnergy': '3,500 kcal',
+            'activeEnergy': '2,100 kcal',
+            'standMinutes': '315 min',
+            'exerciseMinutes': '210 min',
+            'sitMinutes': '28 hours',
+            'workouts': '14',
+            'runningSpeed': '6.5 m/h',
+            'caloriesBurned': '2,450 kcal',
+            'sleep': '49 hours'
+         },
+         'month': {
+            'steps': '150,000',
+            'distance': '90 m',
+            'flightsClimbed': '300',
+            'restingEnergy': '15,000 kcal',
+            'activeEnergy': '9,000 kcal',
+            'standMinutes': '1,350 min',
+            'exerciseMinutes': '900 min',
+            'sitMinutes': '120 hours',
+            'workouts': '60',
+            'runningSpeed': '7 m/h',
+            'caloriesBurned': '10,500 kcal',
+            'sleep': '210 hours'
+         }
+      };
+
+      // update data
+      function updateData(timeframe) {
+         for (var box in data[timeframe]) {
+            if (data[timeframe].hasOwnProperty(box)) {
+               var boxElement = document.getElementById(box);
+               if (boxElement) {
+                  // last div is where data is, step count, calorie count etc
+                  var dataDiv = boxElement.lastElementChild;
+                  if (dataDiv) {
+                     dataDiv.innerText = data[timeframe][box];
+                  }
+               }
+            }
+         }
+
+         // active data highlighted
+         document.querySelectorAll('.timeframe-button').forEach(function (button) {
+            button.classList.remove('active-timeframe');
+         });
+         document.getElementById(timeframe).classList.add('active-timeframe');
+      }
+
+      // day data on load
+      document.addEventListener('DOMContentLoaded', function () {
+         updateData('day');
+      });
+   </script>
+   <style>
+      .timeframe-button {
+         background-color: transparent;
+         /* just text without backgrn*/
+         border: 1px solid #ccc;
+         /* border to add target for mouse/click/touch */
+         padding: 10px 20px;
+         /*spcaing between */
+         margin: 0 5px;
+         cursor: pointer;
+      }
+
+      .timeframe-button:hover {
+         background-color: rgba(0, 123, 255, 0.1);
+         /* highlight on hover */
+      }
+
+      .active-timeframe {
+         background-color: #007bff;
+         /* active button background  */
+         color: white;
+         border-color: #007bff;
+      }
+
+      .active-timeframe:hover {
+         background-color: #007bff;
+         /* active button hover background */
+      }
+   </style>
+
+
+
 </body>
 
 </html>
