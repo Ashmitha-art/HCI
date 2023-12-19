@@ -94,8 +94,23 @@
 
 <!-- popup  -->
 <div id="popupContainer" >
-    <span id="popupContent">Content goes here </span>
-    <button onclick="closePopup()">X</button>
+   <button onclick="closePopup()">X</button>
+   <div id="popupContentWrapper" style="padding-top: 40px;">
+    <span id="popupContent">
+       <!-- container for boxes in popup -->
+       <div class="popup-boxes">
+         <div class="popup-box">
+             <div class="popup-box-title">Title 1</div>
+             <div class="popup-box-content">Content 1</div>
+         </div>
+         <div class="popup-box">
+             <div class="popup-box-title">Title 2</div>
+             <div class="popup-box-content">Content 2</div>
+         </div>
+         <!-- Add more boxes as needed -->
+     </div>
+    </span>
+   </div>
 </div>
 
       
@@ -109,7 +124,11 @@
                         <div class="col-lg-3 col-md-6">
                            <div class="coffee_img">
                               <img src="images/pizza.png" class="clickable-image"
-                              onclick="showPopup('Delicious customizable choice, great for gatherings and eating with groups of people.')">
+                              onclick="showPopup([
+                              { title: '', description: 'Delicious customizable choice, great for gatherings and eating with groups of people.' },
+                              { title: 'Title 2', description: 'Description for Title 2' }
+                              // Add more objects as needed
+                          ]);">
                            </div>
                            <h3 class="types_text">Pizza</h3>
                            <p class="looking_text">Filling and great for parties</p>
@@ -258,11 +277,34 @@
    <script src="js/custom.js"></script>
    <!-- popup in and out -->
    <script>
-      function showPopup(content) {
-          document.getElementById('popupContent').innerHTML = content;
-          document.getElementById('popupContainer').style.display = 'block';
-          document.getElementById('popupBackdrop').style.display = 'block';
-      }
+//       function showPopup(content) {
+//     document.getElementById('popupContent').innerHTML = '<div class="popup-boxes">' +
+//         '<div class="popup-box">' +
+//         '<div class="popup-box-title">Title 1</div>' +
+//         '<div class="popup-box-content">' + content + '</div>' +
+//         '</div>' +
+//         // Add more boxes as needed
+//         '</div>';
+//     document.getElementById('popupContainer').style.display = 'block';
+//     document.getElementById('popupBackdrop').style.display = 'block';
+// }
+
+function showPopup(contents) {
+    let popupHtml = '<div class="popup-boxes">';
+    contents.forEach(content => {
+        popupHtml += '<div class="popup-box">' +
+                     '<div class="popup-box-title">' + content.title + '</div>' +
+                     '<div class="popup-box-content">' + content.description + '</div>' +
+                     '</div>';
+    });
+    popupHtml += '</div>';
+    
+    document.getElementById('popupContent').innerHTML = popupHtml;
+    document.getElementById('popupContainer').style.display = 'block';
+    document.getElementById('popupBackdrop').style.display = 'block';
+}
+
+
   
       function closePopup() {
           document.getElementById('popupContainer').style.display = 'none';

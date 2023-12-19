@@ -39,3 +39,36 @@
     opacity: 0.8;
     border: 2px solid #007bff;
 }
+
+/*---------------------------------------------------------------------*/
+.popup-boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px; /* box spacing */
+}
+
+.popup-box {
+    width: calc(80%); 
+    border: 1px solid #ddd;
+    padding: 10px;
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.3);
+}
+
+.popup-box-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+ #popupContainer button {
+     position: absolute; /* close button placement */
+     top: 10px; /* from top */
+     right: 10px; /* from right */
+     background-color: transparent; 
+     border: none; 
+     cursor: pointer; /* pointer */
+ }
+
+ #popupContentWrapper {
+     padding-top: 20px; /* prevent overlap */
+ }
