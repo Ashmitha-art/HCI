@@ -98,8 +98,23 @@
 
 <!-- popup  -->
 <div id="popupContainer" >
-    <span id="popupContent">Content goes here </span>
-    <button onclick="closePopup()">X</button>
+   <button onclick="closePopup()">X</button>
+   <div id="popupContentWrapper" style="padding-top: 40px;">
+    <span id="popupContent">
+       <!-- container for boxes in popup -->
+       <div class="popup-boxes">
+         <div class="popup-box">
+             <div class="popup-box-title">Title 1</div>
+             <div class="popup-box-content">Content 1</div>
+         </div>
+         <div class="popup-box">
+             <div class="popup-box-title">Title 2</div>
+             <div class="popup-box-content">Content 2</div>
+         </div>
+         <!-- Add more boxes as needed -->
+     </div>
+    </span>
+   </div>
 </div>
 
 
@@ -113,7 +128,14 @@
                         <div class="col-lg-3 col-md-6">
                            <div class="coffee_img">
                               <img src="images/socks.png" class="clickable-image"
-                              onclick="showPopup('High socks to keep your legs warm and protected. Great for brisk mornings and cool evenings.')">
+                              onclick="showPopup([
+                              { title: 'High Socks', description: 'High socks to keep your legs warm. Great for brisk mornings and cool evenings.' },
+                              { title: 'Classic Cotton Crew (0.8 miles)', description: '123 Cotton Ave, San Francisco, CA' },
+                              { title: 'Performance Athletic (1.2 miles)', description: '456 Sporty Ln, San Francisco, CA' },
+                              { title: 'Cozy Woolen Knits (1.5 miles)', description: '789 Cozy Ct, San Francisco, CA' },
+                              { title: 'Funky Patterned Designs (2.0 miles)', description: '101 Design Dr, San Francisco, CA' },
+                              { title: 'Eco-Friendly Bamboo (2.4 miles)', description: '202 Green Blvd, San Francisco, CA' }
+                          ]);">
                           </div>
                           
                            <h3 class="types_text">High Socks</h3>
@@ -122,7 +144,14 @@
                         <div class="col-lg-3 col-md-6">
                            <div class="coffee_img">
                               <img src="images/scarf.png" class="clickable-image"
-                              onclick="showPopup('Adds a fashionable touch to your outfit with a scarf. Great for keeping your neck warm')">
+                              onclick="showPopup([
+                              { title: 'Scarfs', description: 'Adds a fashionable touch to your outfit with a scarf. Great for keeping your neck warm.' },
+                              { title: 'Classic Cotton Scarf (1.1 miles)', description: '456 Cozy St, San Francisco, CA' },
+                              { title: 'Elegant Silk Scarf (0.9 miles)', description: '789 Silk Rd, San Francisco, CA' },
+                              { title: 'Cozy Wool Scarf (1.7 miles)', description: '101 Woolen Way, San Francisco, CA' },
+                              { title: 'Patterned Pashmina (2.3 miles)', description: '202 Pattern Ln, San Francisco, CA' },
+                              { title: 'Chunky Knit Scarf (1.8 miles)', description: '303 Knit St, San Francisco, CA' }
+                          ]);">
                            </div>
                            <h3 class="types_text">Scarf</h3>
                            <p class="looking_text">Trendy and cute</p>
@@ -130,7 +159,14 @@
                         <div class="col-lg-3 col-md-6">
                            <div class="coffee_img">
                               <img src="images/boot.png" class="clickable-image"
-                              onclick="showPopup('Boots add style and versatility to your outfit with a secure and stylish footwear option.')">
+                              onclick="showPopup([
+                              { title: 'Boots', description: 'Boots add style and versatility to your outfit with a secure and stylish footwear option.' },
+                              { title: 'Leather Ankle Boots (1.0 miles)', description: '321 Leather Rd, San Francisco, CA' },
+                              { title: 'Trendy Chelsea Boots (1.6 miles)', description: '654 Fashion Ave, San Francisco, CA' },
+                              { title: 'Rugged Hiking Boots (2.1 miles)', description: '987 Trail St, San Francisco, CA' },
+                              { title: 'Stylish Knee-High Boots (1.8 miles)', description: '123 High St, San Francisco, CA' },
+                              { title: 'Waterproof Rain Boots (2.5 miles)', description: '456 Puddle Ln, San Francisco, CA' }
+                          ]);">
                            </div>
                            <h3 class="types_text">Boots</h3>
                            <p class="looking_text">Offers grip</p>
@@ -138,7 +174,14 @@
                         <div class="col-lg-3 col-md-6">
                            <div class="coffee_img">
                               <img src="images/t-shirt.png" class="clickable-image"
-                              onclick="showPopup('Good for maintaining heat in cold weather and help to keep cool in hot weather.')">
+                              onclick="showPopup([
+                              { title: 'Boots', description: 'Boots add style and versatility to your outfit with a secure and stylish footwear option.' },
+                              { title: 'Leather Ankle Boots (1.0 miles)', description: '321 Leather Rd, San Francisco, CA' },
+                              { title: 'Trendy Chelsea Boots (1.6 miles)', description: '654 Fashion Ave, San Francisco, CA' },
+                              { title: 'Rugged Hiking Boots (2.1 miles)', description: '987 Trail St, San Francisco, CA' },
+                              { title: 'Stylish Knee-High Boots (1.8 miles)', description: '123 High St, San Francisco, CA' },
+                              { title: 'Waterproof Rain Boots (2.5 miles)', description: '456 Puddle Ln, San Francisco, CA' }
+                          ]);">
                            </div>
                            <h3 class="types_text">Thermals</h3>
                            <p class="looking_text">Regulates body temperature</p>
@@ -152,7 +195,14 @@
                         <div class="col-lg-3 col-md-6">
                            <div class="coffee_img">
                               <img src="images/socks.png" class="clickable-image"
-                              onclick="showPopup('High socks to keep your legs warm. Great for brisk mornings and cool evenings.')">
+                              onclick="showPopup([
+                              { title: 'High Socks', description: 'High socks to keep your legs warm. Great for brisk mornings and cool evenings.' },
+                              { title: 'Classic Cotton Crew (0.8 miles)', description: '123 Cotton Ave, San Francisco, CA' },
+                              { title: 'Performance Athletic (1.2 miles)', description: '456 Sporty Ln, San Francisco, CA' },
+                              { title: 'Cozy Woolen Knits (1.5 miles)', description: '789 Cozy Ct, San Francisco, CA' },
+                              { title: 'Funky Patterned Designs (2.0 miles)', description: '101 Design Dr, San Francisco, CA' },
+                              { title: 'Eco-Friendly Bamboo (2.4 miles)', description: '202 Green Blvd, San Francisco, CA' }
+                          ]);">
                           </div>
                            <h3 class="types_text">High Socks</h3>
                            <p class="looking_text">Warm and protected</p>
@@ -160,7 +210,14 @@
                         <div class="col-lg-3 col-md-6">
                            <div class="coffee_img">
                               <img src="images/scarf.png" class="clickable-image"
-                              onclick="showPopup('Adds a fashionable touch to your outfit with a scarf. Great for keeping your neck warm.')">
+                              onclick="showPopup([
+                              { title: 'Scarfs', description: 'Adds a fashionable touch to your outfit with a scarf. Great for keeping your neck warm.' },
+                              { title: 'Classic Cotton Scarf (1.1 miles)', description: '456 Cozy St, San Francisco, CA' },
+                              { title: 'Elegant Silk Scarf (0.9 miles)', description: '789 Silk Rd, San Francisco, CA' },
+                              { title: 'Cozy Wool Scarf (1.7 miles)', description: '101 Woolen Way, San Francisco, CA' },
+                              { title: 'Patterned Pashmina (2.3 miles)', description: '202 Pattern Ln, San Francisco, CA' },
+                              { title: 'Chunky Knit Scarf (1.8 miles)', description: '303 Knit St, San Francisco, CA' }
+                          ]);">
                            </div>
                            <h3 class="types_text">Scarf</h3>
                            <p class="looking_text">Trendy and cute</p>
@@ -168,7 +225,14 @@
                         <div class="col-lg-3 col-md-6">
                            <div class="coffee_img">
                               <img src="images/boot.png" class="clickable-image"
-                              onclick="showPopup('Boots add style and versatility to your outfit with a secure and stylish footwear option.')">
+                              onclick="showPopup([
+                              { title: 'Boots', description: 'Boots add style and versatility to your outfit with a secure and stylish footwear option.' },
+                              { title: 'Leather Ankle Boots (1.0 miles)', description: '321 Leather Rd, San Francisco, CA' },
+                              { title: 'Trendy Chelsea Boots (1.6 miles)', description: '654 Fashion Ave, San Francisco, CA' },
+                              { title: 'Rugged Hiking Boots (2.1 miles)', description: '987 Trail St, San Francisco, CA' },
+                              { title: 'Stylish Knee-High Boots (1.8 miles)', description: '123 High St, San Francisco, CA' },
+                              { title: 'Waterproof Rain Boots (2.5 miles)', description: '456 Puddle Ln, San Francisco, CA' }
+                          ]);">
                            </div>
                            <h3 class="types_text">Boots</h3>
                            <p class="looking_text">Offers grip</p>
@@ -176,7 +240,14 @@
                         <div class="col-lg-3 col-md-6">
                            <div class="coffee_img">
                               <img src="images/t-shirt.png" class="clickable-image"
-                              onclick="showPopup('Good for maintaining heat in cold weather and help to keep cool in hot weather.')">
+                              onclick="showPopup([
+                              { title: 'Boots', description: 'Boots add style and versatility to your outfit with a secure and stylish footwear option.' },
+                              { title: 'Leather Ankle Boots (1.0 miles)', description: '321 Leather Rd, San Francisco, CA' },
+                              { title: 'Trendy Chelsea Boots (1.6 miles)', description: '654 Fashion Ave, San Francisco, CA' },
+                              { title: 'Rugged Hiking Boots (2.1 miles)', description: '987 Trail St, San Francisco, CA' },
+                              { title: 'Stylish Knee-High Boots (1.8 miles)', description: '123 High St, San Francisco, CA' },
+                              { title: 'Waterproof Rain Boots (2.5 miles)', description: '456 Puddle Ln, San Francisco, CA' }
+                          ]);">
                            </div>
                            <h3 class="types_text">Thermals</h3>
                            <p class="looking_text">Regulates body temperature</p>
@@ -190,7 +261,14 @@
                         <div class="col-lg-3 col-md-6">
                            <div class="coffee_img">
                               <img src="images/socks.png" class="clickable-image"
-                              onclick="showPopup('High socks to keep your legs warm and protected. Great for brisk mornings and cool evenings.')">
+                              onclick="showPopup([
+                              { title: 'High Socks', description: 'High socks to keep your legs warm. Great for brisk mornings and cool evenings.' },
+                              { title: 'Classic Cotton Crew (0.8 miles)', description: '123 Cotton Ave, San Francisco, CA' },
+                              { title: 'Performance Athletic (1.2 miles)', description: '456 Sporty Ln, San Francisco, CA' },
+                              { title: 'Cozy Woolen Knits (1.5 miles)', description: '789 Cozy Ct, San Francisco, CA' },
+                              { title: 'Funky Patterned Designs (2.0 miles)', description: '101 Design Dr, San Francisco, CA' },
+                              { title: 'Eco-Friendly Bamboo (2.4 miles)', description: '202 Green Blvd, San Francisco, CA' }
+                          ]);">
                           </div>
                            <h3 class="types_text">High Socks</h3>
                            <p class="looking_text">Warm and protected</p>
@@ -198,7 +276,14 @@
                         <div class="col-lg-3 col-md-6">
                            <div class="coffee_img">
                               <img src="images/scarf.png" class="clickable-image"
-                              onclick="showPopup('Adds a fashionable touch to your outfit with a scarf. Great for keeping your neck warm.')">
+                              onclick="showPopup([
+                              { title: 'Scarfs', description: 'Adds a fashionable touch to your outfit with a scarf. Great for keeping your neck warm.' },
+                              { title: 'Classic Cotton Scarf (1.1 miles)', description: '456 Cozy St, San Francisco, CA' },
+                              { title: 'Elegant Silk Scarf (0.9 miles)', description: '789 Silk Rd, San Francisco, CA' },
+                              { title: 'Cozy Wool Scarf (1.7 miles)', description: '101 Woolen Way, San Francisco, CA' },
+                              { title: 'Patterned Pashmina (2.3 miles)', description: '202 Pattern Ln, San Francisco, CA' },
+                              { title: 'Chunky Knit Scarf (1.8 miles)', description: '303 Knit St, San Francisco, CA' }
+                          ]);">
                            </div>
                            <h3 class="types_text">Scarf</h3>
                            <p class="looking_text">Trendy and cute</p>
@@ -206,7 +291,14 @@
                         <div class="col-lg-3 col-md-6">
                            <div class="coffee_img">
                               <img src="images/boot.png" class="clickable-image"
-                              onclick="showPopup('Boots add style and versatility to your outfit with a secure and stylish footwear option.')">
+                              onclick="showPopup([
+                              { title: 'Boots', description: 'Boots add style and versatility to your outfit with a secure and stylish footwear option.' },
+                              { title: 'Leather Ankle Boots (1.0 miles)', description: '321 Leather Rd, San Francisco, CA' },
+                              { title: 'Trendy Chelsea Boots (1.6 miles)', description: '654 Fashion Ave, San Francisco, CA' },
+                              { title: 'Rugged Hiking Boots (2.1 miles)', description: '987 Trail St, San Francisco, CA' },
+                              { title: 'Stylish Knee-High Boots (1.8 miles)', description: '123 High St, San Francisco, CA' },
+                              { title: 'Waterproof Rain Boots (2.5 miles)', description: '456 Puddle Ln, San Francisco, CA' }
+                          ]);">
                            </div>
                            <h3 class="types_text">Boots</h3>
                            <p class="looking_text">Offers grip</p>
@@ -214,7 +306,14 @@
                         <div class="col-lg-3 col-md-6">
                            <div class="coffee_img">
                               <img src="images/t-shirt.png" class="clickable-image"
-                              onclick="showPopup('Good for maintaining heat in cold weather and help to keep cool in hot weather.')">
+                              onclick="showPopup([
+                              { title: 'Boots', description: 'Boots add style and versatility to your outfit with a secure and stylish footwear option.' },
+                              { title: 'Leather Ankle Boots (1.0 miles)', description: '321 Leather Rd, San Francisco, CA' },
+                              { title: 'Trendy Chelsea Boots (1.6 miles)', description: '654 Fashion Ave, San Francisco, CA' },
+                              { title: 'Rugged Hiking Boots (2.1 miles)', description: '987 Trail St, San Francisco, CA' },
+                              { title: 'Stylish Knee-High Boots (1.8 miles)', description: '123 High St, San Francisco, CA' },
+                              { title: 'Waterproof Rain Boots (2.5 miles)', description: '456 Puddle Ln, San Francisco, CA' }
+                          ]);">
                            </div>
                            <h3 class="types_text">Thermals</h3>
                            <p class="looking_text">Regulates body temperature</p>
@@ -264,11 +363,20 @@
    <script src="js/custom.js"></script>
    <!-- popup in and out -->
    <script>
-      function showPopup(content) {
-          document.getElementById('popupContent').innerHTML = content;
-          document.getElementById('popupContainer').style.display = 'block';
-          document.getElementById('popupBackdrop').style.display = 'block';
-      }
+      function showPopup(contents) {
+    let popupHtml = '<div class="popup-boxes">';
+    contents.forEach(content => {
+        popupHtml += '<div class="popup-box">' +
+                     '<div class="popup-box-title">' + content.title + '</div>' +
+                     '<div class="popup-box-content">' + content.description + '</div>' +
+                     '</div>';
+    });
+    popupHtml += '</div>';
+    
+    document.getElementById('popupContent').innerHTML = popupHtml;
+    document.getElementById('popupContainer').style.display = 'block';
+    document.getElementById('popupBackdrop').style.display = 'block';
+}
   
       function closePopup() {
           document.getElementById('popupContainer').style.display = 'none';
