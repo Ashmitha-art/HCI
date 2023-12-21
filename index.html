@@ -100,8 +100,23 @@
 
 <!-- popup  -->
 <div id="popupContainer" >
-    <span id="popupContent">Content goes here </span>
-    <button onclick="closePopup()">X</button>
+   <button onclick="closePopup()">X</button>
+   <div id="popupContentWrapper" style="padding-top: 40px;">
+    <span id="popupContent">
+       <!-- container for boxes in popup -->
+       <div class="popup-boxes">
+         <div class="popup-box">
+             <div class="popup-box-title">Title 1</div>
+             <div class="popup-box-content">Content 1</div>
+         </div>
+         <div class="popup-box">
+             <div class="popup-box-title">Title 2</div>
+             <div class="popup-box-content">Content 2</div>
+         </div>
+         <!-- Add more boxes as needed -->
+     </div>
+    </span>
+   </div>
 </div>
 
 
@@ -114,7 +129,26 @@
                         <div class="col-lg-3 col-md-6">
                            <div class="coffee_img">
                               <img src="images/sunny-weather.png" class="clickable-image"
-                              onclick="showPopup('Pleasant, warm weather ideal for outdoor activities.')">
+                              onclick="showPopup([
+                              { title: '6 AM', description: '60°F' },
+                              { title: '7 AM', description: '62°F' },
+                              { title: '8 AM', description: '64°F' },
+                              { title: '9 AM', description: '66°F' },
+                              { title: '10 AM', description: '68°F' },
+                              { title: '11 AM', description: '70°F' },
+                              { title: '12 PM', description: '72°F' },
+                              { title: '1 PM', description: '74°F' },
+                              { title: '2 PM', description: '76°F' },
+                              { title: '3 PM', description: '78°F' },
+                              { title: '4 PM', description: '77°F' },
+                              { title: '5 PM', description: '76°F' },
+                              { title: '6 PM', description: '74°F' },
+                              { title: '7 PM', description: '72°F' },
+                              { title: '8 PM', description: '70°F' },
+                              { title: '9 PM', description: '68°F' },
+                              { title: '10 PM', description: '66°F' },
+                              { title: '11 PM', description: '64°F' }
+                          ]);">
                            </div>
                            <h3 class="types_text">Temperature</h3>
                            <p class="looking_text">78 F</p>
@@ -122,7 +156,26 @@
                         <div class="col-lg-3 col-md-6">
                            <div class="coffee_img">
                               <img src="images/humidity.png" class="clickable-image"
-                              onclick="showPopup('Balanced humidity level for a comfortable day. The air is not too dry nor too humid.')">
+                              onclick="showPopup([
+                              { title: '6 AM', description: '90%' },
+                              { title: '7 AM', description: '88%' },
+                              { title: '8 AM', description: '86%' },
+                              { title: '9 AM', description: '84%' },
+                              { title: '10 AM', description: '82%' },
+                              { title: '11 AM', description: '80%' },
+                              { title: '12 PM', description: '78%' },
+                              { title: '1 PM', description: '76%' },
+                              { title: '2 PM', description: '74%' },
+                              { title: '3 PM', description: '72%' },
+                              { title: '4 PM', description: '70%' },
+                              { title: '5 PM', description: '68%' },
+                              { title: '6 PM', description: '66%' },
+                              { title: '7 PM', description: '64%' },
+                              { title: '8 PM', description: '62%' },
+                              { title: '9 PM', description: '60%' },
+                              { title: '10 PM', description: '58%' },
+                              { title: '11 PM', description: '56%' }
+                          ]);">
                            </div>
                            <h3 class="types_text">Humidity</h3>
                            <p class="looking_text">67 %</p>
@@ -130,7 +183,27 @@
                         <div class="col-lg-3 col-md-6">
                            <div class="coffee_img">
                               <img src="images/rain-cloud.png" class="clickable-image"
-                              onclick="showPopup('Minimal chance of rain.  Unlikely to require an umbrealla or rainwear.')">
+                              onclick="showPopup([
+                              { title: '6 AM', description: '10%' },
+                              { title: '7 AM', description: '15%' },
+                              { title: '8 AM', description: '20%' },
+                              { title: '9 AM', description: '25%' },
+                              { title: '10 AM', description: '30%' },
+                              { title: '11 AM', description: '35%' },
+                              { title: '12 PM', description: '40%' },
+                              { title: '1 PM', description: '45%' },
+                              { title: '2 PM', description: '50%' },
+                              { title: '3 PM', description: '55%' },
+                              { title: '4 PM', description: '60%' },
+                              { title: '5 PM', description: '65%' },
+                              { title: '6 PM', description: '70%' },
+                              { title: '7 PM', description: '75%' },
+                              { title: '8 PM', description: '80%' },
+                              { title: '9 PM', description: '85%' },
+                              { title: '10 PM', description: '90%' },
+                              { title: '11 PM', description: '95%' }
+                          ]);
+                          ">
                            </div>
                            <h3 class="types_text">Precipitation</h3>
                            <p class="looking_text">3%</p>
@@ -138,7 +211,26 @@
                         <div class="col-lg-3 col-md-6">
                            <div class="coffee_img">
                               <img src="images/wind.png" class="clickable-image"
-                              onclick="showPopup('Gentle breeze throuhgout the day, with occasional gusts of wind.')">
+                              onclick="showPopup([
+                              { title: '6 AM', description: '5 mph' },
+                              { title: '7 AM', description: '6 mph' },
+                              { title: '8 AM', description: '7 mph' },
+                              { title: '9 AM', description: '8 mph' },
+                              { title: '10 AM', description: '9 mph' },
+                              { title: '11 AM', description: '10 mph' },
+                              { title: '12 PM', description: '11 mph' },
+                              { title: '1 PM', description: '12 mph' },
+                              { title: '2 PM', description: '13 mph' },
+                              { title: '3 PM', description: '14 mph' },
+                              { title: '4 PM', description: '15 mph' },
+                              { title: '5 PM', description: '14 mph' },
+                              { title: '6 PM', description: '13 mph' },
+                              { title: '7 PM', description: '12 mph' },
+                              { title: '8 PM', description: '11 mph' },
+                              { title: '9 PM', description: '10 mph' },
+                              { title: '10 PM', description: '9 mph' },
+                              { title: '11 PM', description: '8 mph' }
+                          ]);">
                            </div>
                            <h3 class="types_text">Wind</h3>
                            <p class="looking_text">8 mph</p>
@@ -152,7 +244,26 @@
                         <div class="col-lg-3 col-md-6">
                            <div class="coffee_img">
                               <img src="images/sunny-weather.png" class="clickable-image"
-                              onclick="showPopup('Pleasant, warm weather ideal for outdoor activities.')">
+                              onclick="showPopup([
+                              { title: '6 AM', description: '60°F' },
+                              { title: '7 AM', description: '62°F' },
+                              { title: '8 AM', description: '64°F' },
+                              { title: '9 AM', description: '66°F' },
+                              { title: '10 AM', description: '68°F' },
+                              { title: '11 AM', description: '70°F' },
+                              { title: '12 PM', description: '72°F' },
+                              { title: '1 PM', description: '74°F' },
+                              { title: '2 PM', description: '76°F' },
+                              { title: '3 PM', description: '78°F' },
+                              { title: '4 PM', description: '77°F' },
+                              { title: '5 PM', description: '76°F' },
+                              { title: '6 PM', description: '74°F' },
+                              { title: '7 PM', description: '72°F' },
+                              { title: '8 PM', description: '70°F' },
+                              { title: '9 PM', description: '68°F' },
+                              { title: '10 PM', description: '66°F' },
+                              { title: '11 PM', description: '64°F' }
+                          ]);">
                            </div>
                            <h3 class="types_text">Temperature</h3>
                            <p class="looking_text">78 F</p>
@@ -160,7 +271,26 @@
                         <div class="col-lg-3 col-md-6">
                            <div class="coffee_img">
                               <img src="images/humidity.png" class="clickable-image"
-                              onclick="showPopup('Balanced humidity level for a comfortable day. The air is not too dry nor too humid.')">
+                              onclick="showPopup([
+                              { title: '6 AM', description: '90%' },
+                              { title: '7 AM', description: '88%' },
+                              { title: '8 AM', description: '86%' },
+                              { title: '9 AM', description: '84%' },
+                              { title: '10 AM', description: '82%' },
+                              { title: '11 AM', description: '80%' },
+                              { title: '12 PM', description: '78%' },
+                              { title: '1 PM', description: '76%' },
+                              { title: '2 PM', description: '74%' },
+                              { title: '3 PM', description: '72%' },
+                              { title: '4 PM', description: '70%' },
+                              { title: '5 PM', description: '68%' },
+                              { title: '6 PM', description: '66%' },
+                              { title: '7 PM', description: '64%' },
+                              { title: '8 PM', description: '62%' },
+                              { title: '9 PM', description: '60%' },
+                              { title: '10 PM', description: '58%' },
+                              { title: '11 PM', description: '56%' }
+                          ]);">
                            </div>
                            <h3 class="types_text">Humidity</h3>
                            <p class="looking_text">67 %</p>
@@ -168,7 +298,27 @@
                         <div class="col-lg-3 col-md-6">
                            <div class="coffee_img">
                               <img src="images/rain-cloud.png" class="clickable-image"
-                              onclick="showPopup('Minimal chance of rain.  Unlikely to require an umbrealla or rainwear.')">
+                              onclick="showPopup([
+                              { title: '6 AM', description: '10%' },
+                              { title: '7 AM', description: '15%' },
+                              { title: '8 AM', description: '20%' },
+                              { title: '9 AM', description: '25%' },
+                              { title: '10 AM', description: '30%' },
+                              { title: '11 AM', description: '35%' },
+                              { title: '12 PM', description: '40%' },
+                              { title: '1 PM', description: '45%' },
+                              { title: '2 PM', description: '50%' },
+                              { title: '3 PM', description: '55%' },
+                              { title: '4 PM', description: '60%' },
+                              { title: '5 PM', description: '65%' },
+                              { title: '6 PM', description: '70%' },
+                              { title: '7 PM', description: '75%' },
+                              { title: '8 PM', description: '80%' },
+                              { title: '9 PM', description: '85%' },
+                              { title: '10 PM', description: '90%' },
+                              { title: '11 PM', description: '95%' }
+                          ]);
+                          ">
                            </div>
                            <h3 class="types_text">Precipitation</h3>
                            <p class="looking_text">3%</p>
@@ -176,7 +326,27 @@
                         <div class="col-lg-3 col-md-6">
                            <div class="coffee_img">
                               <img src="images/wind.png" class="clickable-image"
-                              onclick="showPopup('Gentle breeze throuhgout the day, with occasional gusts of wind.')">
+                              onclick="showPopup([
+                              { title: '6 AM', description: '5 mph' },
+                              { title: '7 AM', description: '6 mph' },
+                              { title: '8 AM', description: '7 mph' },
+                              { title: '9 AM', description: '8 mph' },
+                              { title: '10 AM', description: '9 mph' },
+                              { title: '11 AM', description: '10 mph' },
+                              { title: '12 PM', description: '11 mph' },
+                              { title: '1 PM', description: '12 mph' },
+                              { title: '2 PM', description: '13 mph' },
+                              { title: '3 PM', description: '14 mph' },
+                              { title: '4 PM', description: '15 mph' },
+                              { title: '5 PM', description: '14 mph' },
+                              { title: '6 PM', description: '13 mph' },
+                              { title: '7 PM', description: '12 mph' },
+                              { title: '8 PM', description: '11 mph' },
+                              { title: '9 PM', description: '10 mph' },
+                              { title: '10 PM', description: '9 mph' },
+                              { title: '11 PM', description: '8 mph' }
+                          ]);
+                          ">
                            </div>
                            <h3 class="types_text">Wind</h3>
                            <p class="looking_text">8 mph</p>
@@ -190,7 +360,26 @@
                         <div class="col-lg-3 col-md-6">
                            <div class="coffee_img">
                               <img src="images/sunny-weather.png" class="clickable-image"
-                              onclick="showPopup('Pleasant, warm weather ideal for outdoor activities.')">
+                              onclick="showPopup([
+                              { title: '6 AM', description: '60°F' },
+                              { title: '7 AM', description: '62°F' },
+                              { title: '8 AM', description: '64°F' },
+                              { title: '9 AM', description: '66°F' },
+                              { title: '10 AM', description: '68°F' },
+                              { title: '11 AM', description: '70°F' },
+                              { title: '12 PM', description: '72°F' },
+                              { title: '1 PM', description: '74°F' },
+                              { title: '2 PM', description: '76°F' },
+                              { title: '3 PM', description: '78°F' },
+                              { title: '4 PM', description: '77°F' },
+                              { title: '5 PM', description: '76°F' },
+                              { title: '6 PM', description: '74°F' },
+                              { title: '7 PM', description: '72°F' },
+                              { title: '8 PM', description: '70°F' },
+                              { title: '9 PM', description: '68°F' },
+                              { title: '10 PM', description: '66°F' },
+                              { title: '11 PM', description: '64°F' }
+                          ]);">
                            </div>
                            <h3 class="types_text">Temperature</h3>
                            <p class="looking_text">78 F</p>
@@ -198,7 +387,26 @@
                         <div class="col-lg-3 col-md-6">
                            <div class="coffee_img">
                               <img src="images/humidity.png" class="clickable-image"
-                              onclick="showPopup('Balanced humidity level for a comfortable day. The air is not too dry nor too humid.')">
+                              onclick="showPopup([
+                              { title: '6 AM', description: '90%' },
+                              { title: '7 AM', description: '88%' },
+                              { title: '8 AM', description: '86%' },
+                              { title: '9 AM', description: '84%' },
+                              { title: '10 AM', description: '82%' },
+                              { title: '11 AM', description: '80%' },
+                              { title: '12 PM', description: '78%' },
+                              { title: '1 PM', description: '76%' },
+                              { title: '2 PM', description: '74%' },
+                              { title: '3 PM', description: '72%' },
+                              { title: '4 PM', description: '70%' },
+                              { title: '5 PM', description: '68%' },
+                              { title: '6 PM', description: '66%' },
+                              { title: '7 PM', description: '64%' },
+                              { title: '8 PM', description: '62%' },
+                              { title: '9 PM', description: '60%' },
+                              { title: '10 PM', description: '58%' },
+                              { title: '11 PM', description: '56%' }
+                          ]);">
                            </div>
                            <h3 class="types_text">Humidity</h3>
                            <p class="looking_text">67 %</p>
@@ -206,7 +414,27 @@
                         <div class="col-lg-3 col-md-6">
                            <div class="coffee_img">
                               <img src="images/rain-cloud.png" class="clickable-image"
-                              onclick="showPopup('Minimal chance of rain.  Unlikely to require an umbrealla or rainwear.')">
+                              onclick="showPopup([
+                              { title: '6 AM', description: '10%' },
+                              { title: '7 AM', description: '15%' },
+                              { title: '8 AM', description: '20%' },
+                              { title: '9 AM', description: '25%' },
+                              { title: '10 AM', description: '30%' },
+                              { title: '11 AM', description: '35%' },
+                              { title: '12 PM', description: '40%' },
+                              { title: '1 PM', description: '45%' },
+                              { title: '2 PM', description: '50%' },
+                              { title: '3 PM', description: '55%' },
+                              { title: '4 PM', description: '60%' },
+                              { title: '5 PM', description: '65%' },
+                              { title: '6 PM', description: '70%' },
+                              { title: '7 PM', description: '75%' },
+                              { title: '8 PM', description: '80%' },
+                              { title: '9 PM', description: '85%' },
+                              { title: '10 PM', description: '90%' },
+                              { title: '11 PM', description: '95%' }
+                          ]);
+                          ">
                            </div>
                            <h3 class="types_text">Precipitation</h3>
                            <p class="looking_text">3%</p>
@@ -214,7 +442,27 @@
                         <div class="col-lg-3 col-md-6">
                            <div class="coffee_img">
                               <img src="images/wind.png" class="clickable-image"
-                              onclick="showPopup('Gentle breeze throuhgout the day, with occasional gusts of wind.')">
+                              onclick="showPopup([
+                              { title: '6 AM', description: '5 mph' },
+                              { title: '7 AM', description: '6 mph' },
+                              { title: '8 AM', description: '7 mph' },
+                              { title: '9 AM', description: '8 mph' },
+                              { title: '10 AM', description: '9 mph' },
+                              { title: '11 AM', description: '10 mph' },
+                              { title: '12 PM', description: '11 mph' },
+                              { title: '1 PM', description: '12 mph' },
+                              { title: '2 PM', description: '13 mph' },
+                              { title: '3 PM', description: '14 mph' },
+                              { title: '4 PM', description: '15 mph' },
+                              { title: '5 PM', description: '14 mph' },
+                              { title: '6 PM', description: '13 mph' },
+                              { title: '7 PM', description: '12 mph' },
+                              { title: '8 PM', description: '11 mph' },
+                              { title: '9 PM', description: '10 mph' },
+                              { title: '10 PM', description: '9 mph' },
+                              { title: '11 PM', description: '8 mph' }
+                          ]);
+                          ">
                            </div>
                            <h3 class="types_text">Wind</h3>
                            <p class="looking_text">8 mph</p>
@@ -264,11 +512,20 @@
    <script src="js/custom.js"></script>
    <!-- popup in and out -->
    <script>
-      function showPopup(content) {
-          document.getElementById('popupContent').innerHTML = content;
-          document.getElementById('popupContainer').style.display = 'block';
-          document.getElementById('popupBackdrop').style.display = 'block';
-      }
+      function showPopup(contents) {
+    let popupHtml = '<div class="popup-boxes">';
+    contents.forEach(content => {
+        popupHtml += '<div class="popup-box">' +
+                     '<div class="popup-box-title">' + content.title + '</div>' +
+                     '<div class="popup-box-content">' + content.description + '</div>' +
+                     '</div>';
+    });
+    popupHtml += '</div>';
+    
+    document.getElementById('popupContent').innerHTML = popupHtml;
+    document.getElementById('popupContainer').style.display = 'block';
+    document.getElementById('popupBackdrop').style.display = 'block';
+}
   
       function closePopup() {
           document.getElementById('popupContainer').style.display = 'none';
